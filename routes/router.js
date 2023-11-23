@@ -23,8 +23,7 @@ router.get("/read",(req,res,next)=>{
         if(err){
             res.status(500).json({errmsg:err});
       
-        }else{
-            
+        }else{  
             res.status(200).json({msg:user});
         }
     });
