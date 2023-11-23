@@ -11,10 +11,12 @@ router.post("/create",(req,res,next)=>{
         weight:req.body.weight,
     })
     newuser.save((err,user)=>{
+
    if(err){
     res.status(200).json({msg:user})
-    res.status(500).json({errmsg:err})
+
    }
+  
     })
 
 })

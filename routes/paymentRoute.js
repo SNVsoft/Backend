@@ -5,10 +5,13 @@ const bodyParser = require('body-parser');
 payment_route.use(bodyParser.json());
 payment_route.use(bodyParser.urlencoded({ extended:false }));
 
-const paymentController = require('../controllers/paymentController');
 
-payment_route.post('/create-customer', paymentController.createCustomer);
-payment_route.post('/add-card', paymentController.addNewCard);
-payment_route.post('/create-charges', paymentController.createCharges);
+
+
+
+const paymentController = require('../middleware/Paymentcontroller');
+
+payment_route.get('/', paymentController.renderProductPage);
+payment_route.post('/createOrder', paymentController.createOrder);
 
 module.exports = payment_route;
