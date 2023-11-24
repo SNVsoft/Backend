@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const user = mongoose.model(user,SchemaData)
 const userSchema = new Schema({
     order:{type:String,unique:true},
     date:{type:String,unique:true},
@@ -8,6 +9,7 @@ const userSchema = new Schema({
     customer:{type:String,required:true},
     phone:{type:Number,unique:true},
     weight:{type:String,unique:true},
+    
 });
 
 module.exports = mongoose.model('crud',userSchema);
