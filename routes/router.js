@@ -77,6 +77,26 @@ router.post('/create',(req, res, next)=>{
         customer:req.body.customer,
         phone:req.body.phone,
         weight:req.body.weight,
+<<<<<<< HEAD
+=======
+    })
+    newuser.save((err,user)=>{
+   if(err){
+    res.status(200).json({msg:user})
+    res.status(500).json({errmsg:err})
+   }
+    })
+
+})
+router.get("/read",(req,res,next)=>{
+    User.find({},(err,user)=>{
+        if(err){
+            res.status(500).json({errmsg:err});
+      
+        }else{  
+            res.status(200).json({msg:user});
+        }
+>>>>>>> 5809e9248e9f51a370316d3ae86a5c95652cd1a0
     });
     newuser.save((err,user)=>{
            if(err)
