@@ -157,36 +157,6 @@ router.delete('/delete',(req, res, next)=>{
                         res.status(500).json({errmsg:err});
                         }
                     });
-});
-
-//       router.delete('/delete/:_id',async (req, res, next) => {
-//       const id = req.params.id
-//       console.log(id)
-//     const data = await userModel.deleteOne({_id : id})
-//      user.delete((err,user)=>{
-
-//         if(err){
-
-//            res.status(500).json({errmsg:err})
-//        }
-
-//          res.status(200).json({msg:user})
-  
-
-//     });
-
-// });
-
-
-// router.delete('/api/courses/:{id}', (req, res) => {
-//     const course = courses.find(c => c.id === parseInt(req.params.id));
-//     if (!course) return res.status(404).send('The course with the given ID was not found.');  //404
-
-//     Delete
-//     const index = courses.indexOf(course);
-//     course.splice(index, 1);
-//     res.send(course); 
-
-// });
+})
 
 module.exports = router;

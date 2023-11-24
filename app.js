@@ -81,6 +81,6 @@ app.get('/',(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log('just i created sever')
+    console.log('just i created server')
 });
 
