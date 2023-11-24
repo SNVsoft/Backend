@@ -33,6 +33,7 @@ mongoose.connect('mongodb://localhost:27017/ums',{
 app.use(bodyParser.urlencoded({ extended: false }))
 
 
+
 app.use(bodyParser.json());
 app.use('/auth',authRoute);
 app.use('/route',route);

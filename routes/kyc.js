@@ -1,6 +1,8 @@
-const user = require('../models/userModel');
+const express =require('express');
+const user = require('../models/kycModel');
 const bcrypt = require('bcrypt');
 const nodemailer = require("nodemailer");
+const port = process.env.port ||5000;
 const securePassword = async(password)=>{
     try {
         const passwordHash = await bcrypt.hash(password,10);
@@ -65,7 +67,7 @@ const sendVerifymail = async(name, email, user_id)=>{
                 from: 'snvsolutions@gmail.com',
                 to:email,
                 subject:'for varification mail',
-                html:'<p>hii '+name+'please click here to <a href=""'
+                html:'<p>hii '+name+'please click here to <a href="" '
             
         }
         transporter.sendMail(mailOptions, function(error,info){
